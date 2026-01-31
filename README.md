@@ -331,7 +331,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your-email@example.com or create an issue in the repository.
+For support, email bhuvanesh.s2024aids@sece.ac.in or create an issue in the repository.
 
 ---
 
