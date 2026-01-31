@@ -1,0 +1,255 @@
+/* Proper Chart Styles */
+
+/* Vertical Bar Chart */
+.bar-chart {
+  padding: 2rem 0;
+}
+
+.chart-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
+  background: linear-gradient(to top, #333 0%, transparent 100%);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 120px;
+}
+
+.bar-container {
+  height: 200px;
+  width: 60px;
+  background: #222;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: growUp 1.5s ease;
+}
+
+.bar-fill.top-seller {
+  background: linear-gradient(to top, #28a745, #20c997);
+}
+
+.bar-fill.low-seller {
+  background: linear-gradient(to top, #dc3545, #fd7e14);
+}
+
+.bar-value {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  top: -20px;
+}
+
+.bar-label {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.bar-category {
+  color: #ff9900;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Line Chart */
+.line-chart {
+  padding: 2rem 0;
+}
+
+.chart-area {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #444;
+}
+
+.line-svg {
+  width: 100%;
+  height: 300px;
+}
+
+.line-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 2s ease forwards;
+}
+
+.data-point {
+  opacity: 0;
+  animation: fadeInPoint 0.5s ease forwards;
+}
+
+/* Horizontal Bar Chart */
+.horizontal-bar-chart {
+  padding: 1rem 0;
+}
+
+.h-bar-item {
+  margin-bottom: 1.5rem;
+}
+
+.h-bar-label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.h-bar-container {
+  background: #333;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.h-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  animation: growRight 1.5s ease;
+}
+
+.h-bar-value {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Stock Alerts */
+.stock-alerts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.stock-alert-card {
+  background: linear-gradient(135deg, #2a1a1a, #3a2a1a);
+  border: 2px solid #ffc107;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.alert-icon {
+  font-size: 2.5rem;
+}
+
+.alert-info h4 {
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.alert-info p {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stock-level {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.stock-level.low-stock {
+  background: #ffc107;
+  color: #000;
+}
+
+.stock-level.out-of-stock {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes growUp {
+  from {
+    height: 0;
+  }
+}
+
+@keyframes growRight {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInPoint {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chart-grid {
+    height: 250px;
+    padding: 10px;
+  }
+  
+  .bar-container {
+    height: 150px;
+    width: 40px;
+  }
+  
+  .bar-label {
+    font-size: 12px;
+  }
+  
+  .line-svg {
+    height: 250px;
+  }
+  
+  .stock-alert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
