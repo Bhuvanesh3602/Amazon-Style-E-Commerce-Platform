@@ -1,6 +1,6 @@
 # 🛒 Amazon-Style E-Commerce MERN Stack Application
 
-A full-featured e-commerce web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) featuring Amazon-like UI, advanced analytics, and complete shopping functionality.
+A full-featured e-commerce web application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) featuring Amazon-like UI, advanced analytics, and complete shopping functionality..
 
 ![MERN Stack](https://img.shields.io/badge/Stack-MERN-green)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
